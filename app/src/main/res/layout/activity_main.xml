@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="0dp"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <LinearLayout
+           android:layout_weight="1"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:orientation="vertical"
+           android:gravity="bottom">
+
+           <TextView
+               android:id="@+id/current"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingLeft="24dp"
+               android:paddingRight="24dp"
+               android:text=""
+               android:textAlignment="viewEnd"
+               android:textColor="#f46b45"
+               android:textSize="44sp"
+               app:layout_constraintBottom_toTopOf="@id/previous"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent" />
+
+           <TextView
+               android:id="@+id/previous"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingLeft="24dp"
+               android:paddingRight="24dp"
+               android:paddingBottom="24dp"
+               android:text=""
+               android:textAlignment="viewEnd"
+               android:textColor="@color/numbers_bg"
+               android:textSize="34sp"
+               app:layout_constraintBottom_toTopOf="@id/keypad"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent" />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/keypad"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           android:baselineAligned="false">
+
+           <LinearLayout
+               android:background="@drawable/gradient_bg"
+               android:orientation="vertical"
+               android:layout_weight="3"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent">
+
+               <LinearLayout
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:baselineAligned="false">
+
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+                       <Button
+                           android:id="@+id/all_clear"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/ac"
+                           android:textAllCaps="false"
+                           android:textColor="@color/white"
+                           android:textSize="34sp"/>
+
+                       <Button
+                           android:id="@+id/exp"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/exp"
+                           android:textAllCaps="false"
+                           android:textColor="@color/white"
+                           android:textSize="34sp" />
+
+                       <Button
+                           android:id="@+id/seven"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/_7"
+                           android:textColor="@color/white"
+                           android:textSize="34sp" />
+
+                       <Button
+                           android:id="@+id/four"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/_4"
+                           android:textColor="@color/white"
+                           android:textSize="34sp" />
+
+                       <Button
+                           android:id="@+id/one"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/_1"
+                           android:textColor="@color/white"
+                           android:textSize="34sp" />
+
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+                       <Button
+                           android:id="@+id/left_bracket"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/left_bracket"
+                           android:textAllCaps="false"
+                           android:textColor="@color/white"
+                           android:textSize="34sp"/>
+
+                       <Button
+                           android:id="@+id/log"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/ln"
+                           android:textAllCaps="false"
+                           android:textColor="@color/white"
+                           android:textSize="34sp" />
+
+                       <Button
+                           android:id="@+id/eight"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/_8"
+                           android:textColor="@color/white"
+                           android:textSize="34sp" />
+
+                       <Button
+                           android:id="@+id/five"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/_5"
+                           android:textColor="@color/white"
+                           android:textSize="34sp" />
+
+                       <Button
+                           android:id="@+id/two"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/_2"
+                           android:textColor="@color/white"
+                           android:textSize="34sp" />
+
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+                       <Button
+                           android:id="@+id/right_bracket"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/right_bracket"
+                           android:textAllCaps="false"
+                           android:textColor="@color/white"
+                           android:textSize="34sp"/>
+
+                       <Button
+                           android:id="@+id/dot"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/dot"
+                           android:textAllCaps="false"
+                           android:textColor="@color/white"
+                           android:textSize="34sp" />
+
+                       <Button
+                           android:id="@+id/nine"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/_9"
+                           android:textColor="@color/white"
+                           android:textSize="34sp" />
+
+                       <Button
+                           android:id="@+id/six"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/_6"
+                           android:textColor="@color/white"
+                           android:textSize="34sp" />
+
+                       <Button
+                           android:id="@+id/three"
+                           style="?android:attr/buttonBarButtonStyle"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="0dp"
+                           android:fontFamily="@font/abeezee"
+                           android:paddingTop="16dp"
+                           android:paddingBottom="16dp"
+                           android:text="@string/_3"
+                           android:textColor="@color/white"
+                           android:textSize="34sp" />
+
+
+                   </LinearLayout>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <Button
+                       android:id="@+id/zero"
+                       style="?android:attr/buttonBarButtonStyle"
+                       android:layout_height="wrap_content"
+                       android:layout_width="match_parent"
+                       android:layout_margin="0dp"
+                       android:fontFamily="@font/abeezee"
+                       android:paddingTop="16dp"
+                       android:paddingBottom="16dp"
+                       android:text="@string/_0"
+                       android:textAllCaps="false"
+                       android:textColor="@color/white"
+                       android:textSize="34sp"/>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:background="@drawable/gradient_bg_two"
+               android:layout_weight="1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <Button
+                   android:id="@+id/del"
+                   style="?android:attr/buttonBarButtonStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="0dp"
+                   android:fontFamily="@font/abeezee"
+                   android:paddingTop="16dp"
+                   android:paddingBottom="16dp"
+                   android:text="@string/del"
+                   android:textAllCaps="false"
+                   android:textColor="@color/white"
+                   android:textSize="34sp"/>
+
+               <Button
+                   android:id="@+id/divide"
+                   style="?android:attr/buttonBarButtonStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="0dp"
+                   android:fontFamily="@font/abeezee"
+                   android:paddingTop="16dp"
+                   android:paddingBottom="16dp"
+                   android:text="@string/divide"
+                   android:textAllCaps="false"
+                   android:textColor="@color/white"
+                   android:textSize="34sp" />
+
+               <Button
+                   android:id="@+id/multiply"
+                   style="?android:attr/buttonBarButtonStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="0dp"
+                   android:fontFamily="@font/abeezee"
+                   android:paddingTop="16dp"
+                   android:paddingBottom="16dp"
+                   android:text="@string/multiply"
+                   android:textColor="@color/white"
+                   android:textSize="34sp" />
+
+               <Button
+                   android:id="@+id/subtract"
+                   style="?android:attr/buttonBarButtonStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="0dp"
+                   android:fontFamily="@font/abeezee"
+                   android:paddingTop="16dp"
+                   android:paddingBottom="16dp"
+                   android:text="@string/subtract"
+                   android:textColor="@color/white"
+                   android:textSize="34sp" />
+
+               <Button
+                   android:id="@+id/add"
+                   style="?android:attr/buttonBarButtonStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="0dp"
+                   android:fontFamily="@font/abeezee"
+                   android:paddingTop="16dp"
+                   android:paddingBottom="16dp"
+                   android:text="@string/add"
+                   android:textColor="@color/white"
+                   android:textSize="34sp" />
+
+               <Button
+                   android:id="@+id/equal"
+                   style="?android:attr/buttonBarButtonStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="0dp"
+                   android:fontFamily="@font/abeezee"
+                   android:paddingTop="16dp"
+                   android:paddingBottom="16dp"
+                   android:text="@string/equal"
+                   android:textColor="@color/white"
+                   android:textSize="34sp" />
+
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+   </LinearLayout>
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
